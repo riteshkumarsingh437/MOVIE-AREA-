@@ -18,3 +18,13 @@ services:
         value: "earnlinks.in"
       - key: SHORTENER_API
         value: "ef9e633750559"
+services:
+  - type: web
+    name: movie-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://riteshkumarsingh:iX9Eeca9iRTH3buu@cluster0.sqrcqji.mongodb.net/moviecollection?retryWrites=true&w=majority&appName=Cluster0
