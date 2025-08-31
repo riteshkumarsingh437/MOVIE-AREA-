@@ -1,4 +1,7 @@
-FROM python:3.10.8-slim-buster
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+ && rm -rf /var/lib/apt/lists/*
+ FROM python:3.10.8-slim-buster
 
 WORKDIR /Jisshu-filter-bot
 RUN chmod 777 /Jisshu-filter-bot
