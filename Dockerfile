@@ -1,20 +1,17 @@
-# Start from a base image (Python example)
+# Use Python base image
 FROM python:3.10-slim
 
 # Set working directory
 WORKDIR /app
 
-# Copy your project files into the container
-COPY . /app
+# Copy requirements first (better caching)
+COPY requirements.txt .
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# If you really need apt packages, uncomment:
-# RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git && rm -rf /var/lib/apt/lists/*
+# Copy the rest of the code
+COPY . .
 
-# Expose port (for web services)
-EXPOSE 8000
-
-# Command to run your app
-CMD ["python", "main.py"]
+# Run the bot (replace bot.py with your actual filename)
+CMD ["python", "bot.py"]
