@@ -27,7 +27,7 @@ ADMINS = [
     for admin in environ.get("ADMINS", "").split()
 ]
 OWNER_USERNAME = environ.get(
-    "OWNER_USERNAME", "riteshkumarsingh437"
+    "OWNER_USERNAME", "5234918257"
 )  # without @ or https://t.me/
 USERNAME = environ.get("USERNAME", "5234918257")  # ADMIN USERNAME
 
@@ -38,11 +38,11 @@ CHANNELS = [
 ]
 
 # ForceSub Channel & Log Channels
-AUTH_CHANNEL = int(environ.get("AUTH_CHANNEL", "1002918425042"))
-AUTH_REQ_CHANNEL = int(environ.get("AUTH_REQ_CHANNEL", "1002804180914"))
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "1002984344864"))
-LOG_API_CHANNEL = int(environ.get("LOG_API_CHANNEL", "1002984344864"))
-LOG_VR_CHANNEL = int(environ.get("LOG_VR_CHANNEL", "1002984344864"))
+AUTH_CHANNEL = int(environ.get("AUTH_CHANNEL", "-1002918425042"))
+AUTH_REQ_CHANNEL = int(environ.get("AUTH_REQ_CHANNEL", "-1002804180914"))
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002984344864"))
+LOG_API_CHANNEL = int(environ.get("LOG_API_CHANNEL", "-1002984344864"))
+LOG_VR_CHANNEL = int(environ.get("LOG_VR_CHANNEL", "-1002984344864"))
 
 # MongoDB
 DATABASE_URI = environ.get("DATABASE_URI", "mongodb+srv://riteshkumarsingh:iX9Eeca9iRTH3buu@cluster0.sqrcqji.mongodb.net/moviecollection?retryWrites=true&w=majority&appName=Cluster0")
