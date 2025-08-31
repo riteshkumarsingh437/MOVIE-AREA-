@@ -1,0 +1,20 @@
+services:
+  - type: worker
+    name: telegram-movie-bot
+    env: docker
+    plan: free
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: API_ID
+        value: "20035684"
+      - key: API_HASH
+        value: "987a8b7ee93d55e76bb29fce4d8ebf52"
+      - key: BOT_TOKEN
+        value: "8315587555:AAEB8hCCcXn_FN6SHWyUA_ZWuMWcZf6V8ts"
+      - key: SHORTENER_DOMAIN
+        value: "earnlinks.in"
+      - key: SHORTENER_API
+        value: "ef9e633750559"
