@@ -19,7 +19,7 @@ SESSION = environ.get("SESSION", "Movie_area")
 API_ID = int(environ.get("API_ID", "20035684"))
 API_HASH = environ.get("API_HASH", "987a8b7ee93d55e76bb29fce4d8ebf52")
 BOT_TOKEN = environ.get("BOT_TOKEN", "")
-PORT = environ.get("PORT", "8082")
+PORT = environ.get("PORT", "8080")
 
 # Owners
 ADMINS = [
