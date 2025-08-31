@@ -27,9 +27,9 @@ ADMINS = [
     for admin in environ.get("ADMINS", "").split()
 ]
 OWNER_USERNAME = environ.get(
-    "OWNER_USERNAME", "5234918257"
+    "OWNER_USERNAME", "riteshkumarsingh437"
 )  # without @ or https://t.me/
-USERNAME = environ.get("USERNAME", "5234918257")  # ADMIN USERNAME
+USERNAME = environ.get("USERNAME", "riteshkumarsingh437")  # ADMIN USERNAME
 
 # Database Channel
 CHANNELS = [
