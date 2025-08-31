@@ -1,10 +1,8 @@
-# Base Python image
 FROM python:3.10-slim
 
-# Set working directory inside container
 WORKDIR /app
 
-# Install system dependencies (needed for some pip packages like tgcrypto, cryptography, pyrogram, etc.)
+# Install system dependencies required by Pyrogram + TgCrypto
 RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
@@ -13,14 +11,13 @@ RUN apt-get update && apt-get install -y \
     python3-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements first
+# Copy and install dependencies
 COPY requirements.txt .
-
-# Install Python dependencies
+RUN pip install --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of your bot code
 COPY . .
 
-# Start the bot (replace bot.py with your actual filename)
+# Run the bot (change bot.py if your file is named differently)
 CMD ["python", "bot.py"]
